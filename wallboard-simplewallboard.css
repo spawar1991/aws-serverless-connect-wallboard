@@ -1,0 +1,40 @@
+#wallboard-container{
+    background-color: black;
+}
+#wallboard-container .header{
+    margin-bottom: 2%;
+}
+
+#wallboard-container .header .logo{
+    display: block;
+    float: left;
+    padding: 20px;
+}
+#wallboard-container .header h1{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+table.wallboard-simplewallboard{
+    background-color: transparent !important;
+    padding: 10px;
+    border:none !important;
+    border-spacing: 5px !important;
+    border-collapse: separate !important;
+}
+
+table.wallboard-simplewallboard td{
+    border:none !important
+}
+
+table.wallboard-simplewallboard tbody tr:first-child > td{
+    background-color: transparent !important;
+    color: white;
+}
+
+table.wallboard-simplewallboard tbody tr:not(:first-child) > td{
+    background-color: blue;
+    color: white !important;
+}
+
+

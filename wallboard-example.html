@@ -1,6 +1,7 @@
 <html>
  <head>
   <title>Amazon Connect Wallboard</title>
+  <link rel="stylesheet" href="wallboard-simplewallboard.css">
   <script language="javascript">
    /*
     * Set API Gateway invoke URL in the following line.
@@ -84,7 +85,14 @@
    You may also adjust the refresh interval by changing the
    &quot;RefreshInterval&quot; variable in the code above.
   </p>
-  <div id="wallboard"></div>
+  <div id="wallboard-container">
+    <div class="header">
+        <div class="logo"><img src="panasonic-logo.png" alt="logo"></div>        
+        <h1>Tuesday 15 Sep 09:57:06</h1>
+     </div>
+    <div id="wallboard"></div>
+  </div>
+  
   <script type="text/javascript">
    GetWallboard();
   </script>
