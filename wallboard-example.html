@@ -32,7 +32,7 @@
       Result = API_Client.responseText;
       document.getElementById("wallboard").innerHTML = Result;
       
-      document.getElementById("time").innerHTML = formatAMPM();
+      document.getElementById("time").innerHTML = dateAndTime();
      }
      catch(error) {
       console.log(error);
@@ -44,7 +44,7 @@
     console.log("Query to API Gateway timed out")
    }
 
-   function formatAMPM() {
+   function dateAndTime() {
     var d = new Date(),
         minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
         hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
