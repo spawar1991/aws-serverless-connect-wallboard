@@ -1,0 +1,76 @@
+WallboardTemplateFormatVersion: 1
+Description: Simple Wallboard Example
+Identifier: simplewallboard
+
+Defaults:
+  TextColor: black
+  BackgroundColor: white
+  TextSize: 15
+
+Sources:
+  - Source: AgentsAvailable
+    Description: Agents available in basic queue (real-time)
+    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:AGENTS_AVAILABLE
+  - Source: ContactsInQueue
+    Description: Contacts waiting in basic queue (real-time)
+    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:CONTACTS_IN_QUEUE
+  - Source: LongestWaiting
+    Description: Longest waiting contact in basic queue (real-time)
+    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:OLDEST_CONTACT_AGE
+  - Source: ContactsHandled
+    Description: Number of contacts handled today (historical)
+    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx: yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:CONTACTS_HANDLED
+  - Source: AbandonedCalls
+    Description: Abandoned calls today (historical)
+    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:CONTACTS_ABANDONED
+  - Source: AverageCallTime
+    Description: Average time to handle a call (historical)
+    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:HANDLE_TIME
+
+Rows:
+  - Row: 1
+    Cells:
+    - Cell: 1
+      Text: Agents Available
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 2
+      Text: Contacts in Queue
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 3
+      Text: Longest Waiting
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 4
+      Text: Contacts Handled Today
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 5
+      Text: Abandoned Calls
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 6
+      Text: Average Handle Time
+      BackgroundColor: lightgreen
+      TextSize: 20
+  - Row: 2
+    Cells:
+    - Cell: 1
+      Reference: AgentsAvailable
+      TextColor: blue
+    - Cell: 2
+      Reference: ContactsInQueue
+      TextColor: blue
+    - Cell: 3
+      Reference: LongestWaiting
+      TextColor: blue
+    - Cell: 4
+      Reference: ContactsHandled
+      TextColor: blue
+    - Cell: 5
+      Reference: AbandonedCalls
+      TextColor: blue
+    - Cell: 6
+      Reference: AverageCallTime
+      TextColor: blue
