@@ -30,7 +30,9 @@
     if (API_Client.readyState == XMLHttpRequest.DONE) {
      try {
       Result = API_Client.responseText;
-      document.getElementById("wallboard").innerHTML = Result
+      document.getElementById("wallboard").innerHTML = Result;
+      
+      document.getElementById("time").innerHTML = formatAMPM();
      }
      catch(error) {
       console.log(error);
@@ -41,6 +43,18 @@
    function ProcessTimeout() {
     console.log("Query to API Gateway timed out")
    }
+
+   function formatAMPM() {
+    var d = new Date(),
+        minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+        hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+        seconds = d.getSeconds(),
+        ampm = d.getHours() >= 12 ? 'pm' : 'am',
+        months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    return days[d.getDay()]+' '+d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear()+' '+hours+':'+minutes+':'+seconds;
+    }
+    
   </script>
   <style>
    /*
@@ -88,7 +102,7 @@
   <div id="wallboard-container">
     <div class="header">
         <div class="logo"><img src="panasonic-logo.png" alt="logo"></div>        
-        <h1>Tuesday 15 Sep 09:57:06</h1>
+        <h1 id="time"></h1>
      </div>
     <div id="wallboard"></div>
   </div>
