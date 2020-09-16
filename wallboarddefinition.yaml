@@ -1,6 +1,6 @@
 WallboardTemplateFormatVersion: 1
-Description: Simple Wallboard Example
-Identifier: simplewallboard
+Description: Simple Wallboard Example 1
+Identifier: simplewallboard-1
 
 Defaults:
   TextColor: black
@@ -10,22 +10,25 @@ Defaults:
 Sources:
   - Source: AgentsAvailable
     Description: Agents available in basic queue (real-time)
-    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:AGENTS_AVAILABLE
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:AGENTS_AVAILABLE
   - Source: ContactsInQueue
     Description: Contacts waiting in basic queue (real-time)
-    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:CONTACTS_IN_QUEUE
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_IN_QUEUE
   - Source: LongestWaiting
     Description: Longest waiting contact in basic queue (real-time)
-    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:OLDEST_CONTACT_AGE
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:OLDEST_CONTACT_AGE
   - Source: ContactsHandled
     Description: Number of contacts handled today (historical)
-    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx: yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:CONTACTS_HANDLED
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_HANDLED
   - Source: AbandonedCalls
     Description: Abandoned calls today (historical)
-    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:CONTACTS_ABANDONED
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_ABANDONED
   - Source: AverageCallTime
     Description: Average time to handle a call (historical)
-    Reference: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy:HANDLE_TIME
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:HANDLE_TIME
+  - Source: ServiceLevel
+    Description: Service Lavel (historical)
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:SERVICE_LEVEL
 
 Rows:
   - Row: 1
