@@ -152,7 +152,7 @@ def GetCells(RowConfig):
 
 def SaveToDynamoDB(WallboardName,Records,RecordType):
     Count  = 0
-    Dynamo = boto3.client("dynamodb")
+    Dynamo = boto3.client("dynamodb", region_name='us-east-1')
 
     for Item in Records:
         Item["Identifier"] = {"S":WallboardName}
@@ -168,7 +168,7 @@ def SaveToDynamoDB(WallboardName,Records,RecordType):
             print("DynamoDB error: "+e.response["Error"]["Message"])
 
 def CreateDDBTable():
-    Dynamo = boto3.client("dynamodb")
+    Dynamo = boto3.client("dynamodb", region_name='us-east-1')
     try:
         Response = Dynamo.describe_table(TableName=DDBTableName)
     except:
