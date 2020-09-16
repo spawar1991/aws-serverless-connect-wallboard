@@ -15,7 +15,7 @@
     color: white;
     padding-top: 20px;
 }
-table.wallboard-simplewallboard{
+table.wallboard-simplewallboard-1{
     background-color: transparent !important;
     padding: 10px;
     border:none !important;
@@ -23,16 +23,16 @@ table.wallboard-simplewallboard{
     border-collapse: separate !important;
 }
 
-table.wallboard-simplewallboard td{
+table.wallboard-simplewallboard-1 td{
     border:none !important
 }
 
-table.wallboard-simplewallboard tbody tr:first-child > td{
+table.wallboard-simplewallboard-1 tbody tr:first-child > td{
     background-color: transparent !important;
     color: white;
 }
 
-table.wallboard-simplewallboard tbody tr:not(:first-child) > td{
+table.wallboard-simplewallboard-1 tbody tr:not(:first-child) > td{
     background-color: blue;
     color: white !important;
 }
