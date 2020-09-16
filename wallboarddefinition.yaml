@@ -57,6 +57,10 @@ Rows:
       Text: Average Handle Time
       BackgroundColor: lightgreen
       TextSize: 20
+    - Cell: 7
+      Text: Service Level
+      BackgroundColor: lightgreen
+      TextSize: 20
   - Row: 2
     Cells:
     - Cell: 1
@@ -76,4 +80,7 @@ Rows:
       TextColor: blue
     - Cell: 6
       Reference: AverageCallTime
+      TextColor: blue
+    - Cell: 6
+      Reference: ServiceLevel
       TextColor: blue
