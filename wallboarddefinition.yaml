@@ -10,7 +10,7 @@ Defaults:
 Sources:
   - Source: QueueAvailable
     Description: Avaiable queues (real-time)
-    Reference: *queue
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:*queue
   - Source: AgentsAvailable
     Description: Agents available in basic queue (real-time)
     Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:AGENTS_AVAILABLE
