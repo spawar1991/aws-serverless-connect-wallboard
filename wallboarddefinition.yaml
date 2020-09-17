@@ -8,7 +8,7 @@ Defaults:
   TextSize: 15
 
 Sources:
-  - Source: QueueAvailable
+  - Source: QueueName
     Description: Avaiable queues
     Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:BasicQueue
   - Source: AgentsAvailable
@@ -71,7 +71,7 @@ Rows:
   - Row: 2
     Cells:
     - Cell: 1
-      Reference: QueueAvailable
+      Reference: QueueName
       TextColor: blue
     - Cell: 2
       Reference: AgentsAvailable
