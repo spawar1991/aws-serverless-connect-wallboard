@@ -8,6 +8,8 @@ Defaults:
   TextSize: 15
 
 Sources:
+  - Source: QueueAvailable
+    Description: Avaiable queues (real-time) 
   - Source: AgentsAvailable
     Description: Agents available in basic queue (real-time)
     Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:AGENTS_AVAILABLE
@@ -34,53 +36,60 @@ Rows:
   - Row: 1
     Cells:
     - Cell: 1
-      Text: Agents Available
+      Text: Avaiable queues
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 2
-      Text: Contacts in Queue
+      Text: Agents Available
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 3
-      Text: Longest Waiting
+      Text: Contacts in Queue
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 4
-      Text: Contacts Handled Today
+      Text: Longest Waiting
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 5
-      Text: Abandoned Calls
+      Text: Contacts Handled Today
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 6
-      Text: Average Handle Time
+      Text: Abandoned Calls
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 7
+      Text: Average Handle Time
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 8
       Text: Service Level
       BackgroundColor: lightgreen
       TextSize: 20
   - Row: 2
     Cells:
     - Cell: 1
-      Reference: AgentsAvailable
+      Reference: QueueAvailable
       TextColor: blue
     - Cell: 2
-      Reference: ContactsInQueue
+      Reference: AgentsAvailable
       TextColor: blue
     - Cell: 3
-      Reference: LongestWaiting
+      Reference: ContactsInQueue
       TextColor: blue
     - Cell: 4
-      Reference: ContactsHandled
+      Reference: LongestWaiting
       TextColor: blue
     - Cell: 5
-      Reference: AbandonedCalls
+      Reference: ContactsHandled
       TextColor: blue
     - Cell: 6
-      Reference: AverageCallTime
+      Reference: AbandonedCalls
       TextColor: blue
     - Cell: 7
+      Reference: AverageCallTime
+      TextColor: blue
+    - Cell: 8
       Reference: ServiceLevel
       TextColor: blue
