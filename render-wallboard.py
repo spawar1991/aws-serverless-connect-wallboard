@@ -70,7 +70,7 @@ MetricUnitMapping = {
     "AGENTS_ERROR": "COUNT",
     "CONTACTS_IN_QUEUE": "COUNT",
     "OLDEST_CONTACT_AGE": "SECONDS",
-    "CONTACTS_SCHEDULED": "COUNT"                                 
+    "CONTACTS_SCHEDULED": "COUNT"                                
   }
 
 def GetConfiguration(WallboardName):
