@@ -17,9 +17,9 @@ Sources:
   - Source: ContactsInQueue
     Description: Contacts waiting in basic queue (real-time)
     Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_IN_QUEUE
-  - Source: LongestWaiting
-    Description: Longest waiting contact in basic queue (real-time)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:OLDEST_CONTACT_AGE
+  - Source: LoggedInAgents
+    Description: LoggedIn Agents in basic queue (real-time)
+    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:AGENTS_ONLINE
   - Source: ContactsHandled
     Description: Number of contacts handled today (historical)
     Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_HANDLED
@@ -49,7 +49,7 @@ Rows:
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 4
-      Text: Longest Waiting
+      Text: Agents LoggedIn
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 5
@@ -80,7 +80,7 @@ Rows:
       Reference: ContactsInQueue
       TextColor: blue
     - Cell: 4
-      Reference: LongestWaiting
+      Reference: LoggedInAgents
       TextColor: blue
     - Cell: 5
       Reference: ContactsHandled
