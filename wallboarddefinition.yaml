@@ -10,28 +10,28 @@ Defaults:
 Sources:
   - Source: QueueName
     Description: Avaiable queues
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:BasicQueue
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:HMRCRegistrationsQueue
   - Source: AgentsAvailable
     Description: Agents available in basic queue (real-time)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:AGENTS_AVAILABLE
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:AGENTS_AVAILABLE
   - Source: ContactsInQueue
     Description: Contacts waiting in basic queue (real-time)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_IN_QUEUE
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:CONTACTS_IN_QUEUE
   - Source: LoggedInAgents
     Description: LoggedIn Agents in basic queue (real-time)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:AGENTS_ONLINE
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:AGENTS_ONLINE
   - Source: ContactsHandled
     Description: Number of contacts handled today (historical)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_HANDLED
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:CONTACTS_HANDLED
   - Source: AbandonedCalls
     Description: Abandoned calls today (historical)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:CONTACTS_ABANDONED
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:CONTACTS_ABANDONED
   - Source: AverageCallTime
     Description: Average time to handle a call (historical)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:HANDLE_TIME
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:HANDLE_TIME
   - Source: ServiceLevel
     Description: Service Lavel (historical)
-    Reference: b585afc9-d645-4eb1-a595-a481a4bfe0fa:694cf700-9b79-4b68-bd1e-3adf83f87d1e:SERVICE_LEVEL
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:SERVICE_LEVEL
 
 Rows:
   - Row: 1
