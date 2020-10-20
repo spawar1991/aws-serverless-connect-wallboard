@@ -1,6 +1,6 @@
 WallboardTemplateFormatVersion: 1
 Description: Agents Metrics Queue Dashboard
-Identifier: &queue HMRCRegistrationsQueue
+Identifier: HMRCRegistrationsQueue
 
 Defaults:
   TextColor: black
