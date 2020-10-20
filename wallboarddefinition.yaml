@@ -1,6 +1,6 @@
 WallboardTemplateFormatVersion: 1
-Description: Simple Wallboard Example 1
-Identifier: &queue simplewallboard-1
+Description: Agents Metrics Queue Dashboard
+Identifier: &queue HMRCRegistrationsQueue
 
 Defaults:
   TextColor: black
