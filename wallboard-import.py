@@ -218,7 +218,7 @@ Cells        = []
 DataSources  = []
 MaxColumns   = 0
 MaxRows      = 0
-DDBTableName = "ConnectWallboard"
+DDBTableName = "HMRCConnectWallboard"
 
 if "WallboardTable" in os.environ: DDBTableName = os.environ["WallboardTable"]
 
