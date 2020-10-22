@@ -20,18 +20,15 @@ Sources:
   - Source: LoggedInAgents
     Description: LoggedIn Agents in basic queue (real-time)
     Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:AGENTS_ONLINE
+  - Source: LoggedInAgentsActiveCalls
+    Description: LoggedIn Agents in Active Calls (real-time)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:AGENTS_ON_CALL
   - Source: ContactsHandled
     Description: Number of contacts handled today (historical)
     Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:CONTACTS_HANDLED
   - Source: AbandonedCalls
     Description: Abandoned calls today (historical)
     Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:CONTACTS_ABANDONED
-  - Source: AverageCallTime
-    Description: Average time to handle a call (historical)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:HANDLE_TIME
-  - Source: ServiceLevel
-    Description: Service Lavel (historical)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:SERVICE_LEVEL
 
 Rows:
   - Row: 1
@@ -53,19 +50,15 @@ Rows:
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 5
-      Text: Contacts Handled Today
+      Text: Active Calls
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 6
-      Text: Abandoned Calls
+      Text: Contacts Handled Today
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 7
-      Text: Average Handle Time
-      BackgroundColor: lightgreen
-      TextSize: 20
-    - Cell: 8
-      Text: Service Level
+      Text: Abandoned Calls
       BackgroundColor: lightgreen
       TextSize: 20
   - Row: 2
@@ -83,14 +76,11 @@ Rows:
       Reference: LoggedInAgents
       TextColor: blue
     - Cell: 5
-      Reference: ContactsHandled
+      Reference: LoggedInAgentsActiveCalls
       TextColor: blue
     - Cell: 6
-      Reference: AbandonedCalls
+      Reference: ContactsHandled
       TextColor: blue
     - Cell: 7
-      Reference: AverageCallTime
-      TextColor: blue
-    - Cell: 8
-      Reference: ServiceLevel
+      Reference: AbandonedCalls
       TextColor: blue
