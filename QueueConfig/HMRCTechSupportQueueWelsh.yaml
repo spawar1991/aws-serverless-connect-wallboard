@@ -1,0 +1,86 @@
+WallboardTemplateFormatVersion: 1
+Description: Agents Metrics Queue Dashboard
+Identifier: &queue HMRCTechSupportQueue(W)
+
+Defaults:
+  TextColor: black
+  BackgroundColor: white
+  TextSize: 15
+
+Sources:
+  - Source: QueueName
+    Description: Available queues
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:84f125f9-7a84-4a23-82cf-895b9f05d64e:HMRCTechSupportQueueWelsh
+  - Source: AgentsAvailable
+    Description: Agents available in basic queue (real-time)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:84f125f9-7a84-4a23-82cf-895b9f05d64e:AGENTS_AVAILABLE
+  - Source: ContactsInQueue
+    Description: Contacts waiting in basic queue (real-time)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:84f125f9-7a84-4a23-82cf-895b9f05d64e:CONTACTS_IN_QUEUE
+  - Source: LoggedInAgents
+    Description: LoggedIn Agents in basic queue (real-time)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:84f125f9-7a84-4a23-82cf-895b9f05d64e:AGENTS_ONLINE
+  - Source: LoggedInAgentsActiveCalls
+    Description: LoggedIn Agents in Active Calls (real-time)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:84f125f9-7a84-4a23-82cf-895b9f05d64e:AGENTS_ON_CALL
+  - Source: ContactsHandled
+    Description: Number of contacts handled today (historical)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:84f125f9-7a84-4a23-82cf-895b9f05d64e:CONTACTS_HANDLED
+  - Source: AbandonedCalls
+    Description: Abandoned calls today (historical)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:84f125f9-7a84-4a23-82cf-895b9f05d64e:CONTACTS_ABANDONED
+
+Rows:
+  - Row: 1
+    Cells:
+    - Cell: 1
+      Text: Avaiable queues
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 2
+      Text: Agents Available
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 3
+      Text: Contacts in Queue
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 4
+      Text: Agents LoggedIn
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 5
+      Text: Active Calls
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 6
+      Text: Contacts Handled Today
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 7
+      Text: Abandoned Calls
+      BackgroundColor: lightgreen
+      TextSize: 20
+  - Row: 2
+    Cells:
+    - Cell: 1
+      Reference: QueueName
+      TextColor: blue
+    - Cell: 2
+      Reference: AgentsAvailable
+      TextColor: blue
+    - Cell: 3
+      Reference: ContactsInQueue
+      TextColor: blue
+    - Cell: 4
+      Reference: LoggedInAgents
+      TextColor: blue
+    - Cell: 5
+      Reference: LoggedInAgentsActiveCalls
+      TextColor: blue
+    - Cell: 6
+      Reference: ContactsHandled
+      TextColor: blue
+    - Cell: 7
+      Reference: AbandonedCalls
+      TextColor: blue
