@@ -1,6 +1,6 @@
 WallboardTemplateFormatVersion: 1
 Description: Agents Metrics Queue Dashboard
-Identifier: &queue HMRCRegistrationsQueue
+Identifier: &queue HMRCTechSupportQueue
 
 Defaults:
   TextColor: black
@@ -10,25 +10,28 @@ Defaults:
 Sources:
   - Source: QueueName
     Description: Available queues
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:HMRCRegistrationsQueue
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:HMRCTechSupportQueue
   - Source: AgentsAvailable
     Description: Agents available in basic queue (real-time)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:AGENTS_AVAILABLE
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:AGENTS_AVAILABLE
   - Source: ContactsInQueue
     Description: Contacts waiting in basic queue (real-time)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:CONTACTS_IN_QUEUE
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:CONTACTS_IN_QUEUE
   - Source: LoggedInAgents
     Description: LoggedIn Agents in basic queue (real-time)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:AGENTS_ONLINE
-  - Source: LoggedInAgentsActiveCalls
-    Description: LoggedIn Agents in Active Calls (real-time)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:AGENTS_ON_CALL
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:AGENTS_ONLINE
   - Source: ContactsHandled
     Description: Number of contacts handled today (historical)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:CONTACTS_HANDLED
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:CONTACTS_HANDLED
   - Source: AbandonedCalls
     Description: Abandoned calls today (historical)
-    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:d60f6056-c449-4a37-a202-1b211b864b7d:CONTACTS_ABANDONED
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:CONTACTS_ABANDONED
+  - Source: AverageCallTime
+    Description: Average time to handle a call (historical)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:HANDLE_TIME
+  - Source: ServiceLevel
+    Description: Service Lavel (historical)
+    Reference: 1b0e0912-ca07-486d-b599-aee802fce0e8:47a881f9-7035-4e87-b3e6-14aca19870cd:SERVICE_LEVEL
 
 Rows:
   - Row: 1
@@ -50,15 +53,19 @@ Rows:
       BackgroundColor: lightgreen
       TextSize: 20
     - Cell: 5
-      Text: Active Calls
-      BackgroundColor: lightgreen
-      TextSize: 20
-    - Cell: 6
       Text: Contacts Handled Today
       BackgroundColor: lightgreen
       TextSize: 20
-    - Cell: 7
+    - Cell: 6
       Text: Abandoned Calls
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 7
+      Text: Average Handle Time
+      BackgroundColor: lightgreen
+      TextSize: 20
+    - Cell: 8
+      Text: Service Level
       BackgroundColor: lightgreen
       TextSize: 20
   - Row: 2
@@ -76,11 +83,14 @@ Rows:
       Reference: LoggedInAgents
       TextColor: blue
     - Cell: 5
-      Reference: LoggedInAgentsActiveCalls
-      TextColor: blue
-    - Cell: 6
       Reference: ContactsHandled
       TextColor: blue
-    - Cell: 7
+    - Cell: 6
       Reference: AbandonedCalls
+      TextColor: blue
+    - Cell: 7
+      Reference: AverageCallTime
+      TextColor: blue
+    - Cell: 8
+      Reference: ServiceLevel
       TextColor: blue
